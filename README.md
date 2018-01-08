@@ -45,4 +45,3 @@
 * Add your mLab URI (with username and password) to the `config.js` DB_URI property
 * Run `ngrok http 3333` in terminal to create an endpoint to point the Github webooks to
 * Copy the given ngrok url from the terminal and enter it as the "Payload URL" (adding the '/submission/pr' route at the end) in the webhook setup in Github
-*
