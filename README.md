@@ -35,7 +35,7 @@
 
 ### Development requirements
 
-* Ngrok (https://www.npmjs.com/package/ngrok)
+* globally installed Ngrok package (https://www.npmjs.com/package/ngrok)
 * mLab database
 * globally installed nodemon package
 
