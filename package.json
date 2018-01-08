@@ -1,0 +1,16 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Eviluators test runner API",
+  "main": "index.js",
+  "repository": "https://github.com/Eviluators/api.git",
+  "author": "Eviluators",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "helmet": "^3.9.0",
+    "mongoose": "^4.13.9"
+  }
+}
