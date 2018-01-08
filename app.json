@@ -1,0 +1,7 @@
+{
+  "name": "evilualors-api-server",
+  "description": "Eviluators API Server",
+  "repository": "https://github.com/Eviluators/api",
+  "keywords": ["node", "express", "heroku"],
+  "image": "heroku/nodejs"
+}
