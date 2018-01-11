@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const helmet = require('helmet');
+const axios = require('axios');
 
 // Get app config vars
 const config = require('./config');
@@ -24,12 +25,21 @@ server.use(helmet());
 https: // Endpoint for github hooks
 server.post('/submission/pr', async (req, res) => {
   try {
-    console.log(req.body);
+    const testSubmission = {
+      url: req.body.pull_request.head.repo.html_url,
+      _id: req.body.pull_request.head.repo.id
+    }
+    await axios.post('http://localhost:3434/new-test', { testSubmission });
     res.json(req.body);
   } catch (error) {
-    console.log(req.body);
     res.json(error);
   }
+});
+
+
+server.get('/submission/:id', (req, res) => {
+  const { id } = req.params;
+  // TODO: not sure if this is still needed if we are removing mongo
 });
 
 // TODO: Connect to mongo (should probably be moved to seperate file(s))
